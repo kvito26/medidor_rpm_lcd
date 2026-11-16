@@ -27,7 +27,7 @@ monitor:
       --config baudrate={{monitor_speed}} \
       --port {{port}} \
       --fqbn {{board}} \
-      {{path}}
+      {{path}} --timestamp
 
 alias i := info
 info:
