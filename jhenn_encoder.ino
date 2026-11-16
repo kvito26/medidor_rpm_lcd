@@ -47,8 +47,7 @@ void ProcesarPulsosHallTask(void *parameter){
 	for (;;){
 		//esperar el semaforo binario hasta el infito
 		if (xSemaphoreTake(PulsoHallSemaphoreBin, portMAX_DELAY) == pdTRUE){
-
-
+			Serial.println("Pulso detectado");
 		}
 
 		vTaskDelay(10 / portTICK_PERIOD_MS);
@@ -58,7 +57,7 @@ void ProcesarPulsosHallTask(void *parameter){
 
 //=====================================================
 void setup() {
-	Serial.begin(9600);
+	Serial.begin(115200);
 
 	//****************************************************
 	//CONFIGURACION PARA LOS PINES
